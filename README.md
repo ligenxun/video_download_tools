@@ -34,8 +34,8 @@
 ### 环境安装
 首先需要下载本仓库：
 ```bash
-git clone 
-cd ChatGLM3
+git clone https://github.com/ligenxun/video_download_tools
+cd video_download_tools
 ```
 然后使用 pip 安装依赖：
 ```bash
