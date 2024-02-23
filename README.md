@@ -7,7 +7,11 @@
 
 ## 下载地址
 下载本库中的`software/video_download_tools.exe`文件，放到本地任意目录下。
-[下载地址](software/video_download_tools.exe)
+
+
+[下载地址](https://github.com/ligenxun/video_download_tools/releases/download/alpha/video_download_tools.exe)
+
+    注意，这是Windows电脑的运行软件，不是mac的。mac版本的可以自行编译封装。
 
 ## 使用方法
 
