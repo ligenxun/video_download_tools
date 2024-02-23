@@ -1,0 +1,5 @@
+pyside2
+pyinstaller
+you-get
+youtube-dl
+yt_dlp
