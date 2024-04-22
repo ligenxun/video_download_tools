@@ -24,15 +24,18 @@ def check_file(filename='cookies.txt'):
 
 
 def load_cookies_from_file(cookie_file='cookies.txt'):
-    # 创建一个MozillaCookieJar对象
-    cookie_jar = http.cookiejar.MozillaCookieJar(cookie_file)
-    # 加载cookies.txt文件
-    cookie_jar.load()
-    # 将cookie_jar转换为字典
     cookies_dict = {}
-    for cookie in cookie_jar:
-        cookies_dict[cookie.name] = cookie.value
-    print(cookies_dict)
+    try:
+        # 创建一个MozillaCookieJar对象
+        cookie_jar = http.cookiejar.MozillaCookieJar(cookie_file)
+        # 加载cookies.txt文件
+        cookie_jar.load()
+        # 将cookie_jar转换为字典
+        for cookie in cookie_jar:
+            cookies_dict[cookie.name] = cookie.value
+        print(cookies_dict)
+    except:
+        print("cookies文件内容错误！")
     return cookies_dict
 
 
