@@ -3,6 +3,18 @@
 四五年前写的一个油土鳖下载工具，现在还陆续有人想要地址，想了想，抽一个下午的空，把这个项目重构下，优化下页面以及下载方法。
 解决下Windows10以上可能会出现的无法使用的问题，顺便加上一些下载方法。
 
+2024年04月22日 更新：
+1. 支持cookies使用，方便某些需要登录才能查看或者需要登录才能访问高清资源的网站上下载文件。
+
+    使用操作：
+        
+        1. 老手：将网站cookies导出成cookies.txt文件，放到软件执行目录下（哪里点击运行这个软件，就放到那个文件夹下面）即可。
+        2. 小白：软件执行目录下创建一个cookies.txt（空的就行），软件会自动识别电脑中chrome浏览器里的cookies（仅支持chrome，要chrome浏览器内登录过对应网站即可正确使用)。
+
+2. 封装ffmpeg，不需要再独立下载安装ffmpeg，打开软件就能正常使用了。
+3. 更新日志输出，改成输入框方便日志量大时查看。
+
+
 # 使用方式（就想用，不想编程）：
 
 ## 下载地址
@@ -59,6 +71,19 @@ python run main.py
 ```bash
 pyinstaller -F main.py
 ```
+有提示窗口的模式+ffmpeg封装（现在使用方式）：
+首先在main.spec文件中，修改：
+
+a = Analysis(
+    ...
+    binaries=[('D:\\MyAITools\\ffmpeg\\ffmpeg_win64_gpl\\bin\\ffmpeg.exe', '.')],
+    ...
+)
+然后执行：
+```bash
+pyinstaller main.spec
+```
+
 无提示窗口的模式（如有需要可以自行封装）：
 ```bash
 pyinstaller -F -w main.py
