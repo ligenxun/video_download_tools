@@ -108,6 +108,8 @@ class downloadPopup:
         bt2.pack(side=tk.LEFT)
 
         tk.Label(self.ytm, text='默认保存地址 = ' + self.videoSavePath).pack()
+        tk.Label(self.ytm, text='注意，如果需要使用到cookies来下载\n，那么请使用yt_dlp，并且在软件运行的文件夹下，\n创建名为cookies.txt的文件，软件会自动尝试读取cookies，\n如果无法读取，那么会尽量识别电脑中chrome浏览器里的cookies').pack()
+
 
         self.ytm.mainloop()  # 进入主循环
 

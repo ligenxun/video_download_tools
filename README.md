@@ -59,6 +59,14 @@ python run main.py
 ```bash
 pyinstaller -F main.py
 ```
+有提示窗口的模式+ffmpeg（现在使用方式）：
+```bash
+pyinstaller -F -p D:\MyAITools\ffmpeg\ffmpeg_win64_gpl\bin main.py
+```
+完整执行路径方式+有提示窗口的模式+ffmpeg（现在使用方式）：
+```bash
+E:\MyCode\Python\video_download_tools\venv\Scripts\pyinstaller.exe --onefile -F --add-data "D:\MyAITools\ffmpeg\ffmpeg_win64_gpl\bin;bin" main.py
+```
 无提示窗口的模式（如有需要可以自行封装）：
 ```bash
 pyinstaller -F -w main.py
